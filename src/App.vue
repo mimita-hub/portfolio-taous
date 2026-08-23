@@ -8,6 +8,7 @@
     <Projects />
     <Contact />
     <Footer />
+
   </div>
 </template>
 

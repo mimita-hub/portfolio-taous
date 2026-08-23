@@ -2,8 +2,8 @@
     <section id="experience" class="relative w-full py-24 px-5 sm:px-8 md:px-12 lg:px-8">
         <!-- Background glow -->
         <div class="absolute inset-0 -z-10 overflow-hidden">
-            <div class="absolute top-1/4 right-1/4 w-100 h-100 rounded-full bg-pink-500/10 blur-[120px]"></div>
-            <div class="absolute bottom-1/4 left-1/4 w-100 h-100 rounded-full bg-cyan-500/10 blur-[120px]">
+            <div class="absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-pink-500/10 blur-[120px]"></div>
+            <div class="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-cyan-500/10 blur-[120px]">
             </div>
         </div>
 
@@ -16,7 +16,7 @@
                 </p>
                 <h2 class="text-white font-bold text-3xl md:text-4xl lg:text-5xl">
                     Work
-                    <span class="text-transparent bg-clip-text bg-linear-to-r from-pink-400 to-cyan-400">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-cyan-400">
                         Experience
                     </span>
                 </h2>
@@ -31,13 +31,13 @@
                 <div
                     class="flex md:flex-col gap-2 overflow-x-auto md:overflow-visible pb-2 md:pb-0 -mx-1 px-1 md:mx-0 md:px-0 scroll-smooth">
                     <button v-for="(job, index) in experience" :key="job.company" @click="activeIndex = index"
-                        class="relative shrink-0 md:shrink text-left px-5 py-4 rounded-xl border transition-all duration-300 whitespace-nowrap md:whitespace-normal"
+                        class="relative flex-shrink-0 md:flex-shrink text-left px-5 py-4 rounded-xl border transition-all duration-300 whitespace-nowrap md:whitespace-normal"
                         :class="activeIndex === index
                             ? 'bg-white/10 border-cyan-400/50 md:pl-6'
-                            : 'bg-white/2 border-white/10 hover:bg-white/5 hover:border-white/20'">
+                            : 'bg-white/[0.02] border-white/10 hover:bg-white/5 hover:border-white/20'">
                         <!-- Barre active à gauche (desktop) -->
                         <span v-if="activeIndex === index"
-                            class="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 rounded-full bg-linear-to-b from-pink-400 to-cyan-400"></span>
+                            class="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 rounded-full bg-gradient-to-b from-pink-400 to-cyan-400"></span>
 
                         <p class="font-semibold text-sm"
                             :class="activeIndex === index ? 'text-white' : 'text-gray-300'">
@@ -52,7 +52,7 @@
                 <!-- Détail du poste sélectionné -->
                 <transition name="fade-slide" mode="out-in">
                     <div :key="activeIndex"
-                        class="relative rounded-2xl p-6 sm:p-8 bg-white/5 border border-white/10 backdrop-blur-sm min-h-70 overflow-hidden">
+                        class="relative rounded-2xl p-6 sm:p-8 bg-white/5 border border-white/10 backdrop-blur-sm min-h-[280px] overflow-hidden">
                         <!-- Subtle gradient corner -->
                         <div
                             class="absolute top-0 right-0 w-48 h-48 rounded-full bg-cyan-500/5 blur-3xl pointer-events-none">
@@ -66,13 +66,13 @@
                                         {{ experience[activeIndex].role }}
                                     </h3>
                                     <p
-                                        class="text-transparent bg-clip-text bg-linear-to-r from-pink-400 to-cyan-400 font-semibold mt-1">
+                                        class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-cyan-400 font-semibold mt-1">
                                         {{ experience[activeIndex].company }}
                                     </p>
                                     <!-- Location -->
                                     <p v-if="experience[activeIndex].location"
                                         class="flex items-center gap-1.5 text-gray-400 text-sm mt-2">
-                                        <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor"
+                                        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor"
                                             viewBox="0 0 24 24" stroke-width="1.8">
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -83,7 +83,7 @@
                                     </p>
                                 </div>
                                 <span
-                                    class="inline-flex items-center gap-1.5 text-xs font-medium text-gray-400 px-3 py-1.5 rounded-full border border-white/10 bg-white/3 whitespace-nowrap">
+                                    class="inline-flex items-center gap-1.5 text-xs font-medium text-gray-400 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.03] whitespace-nowrap">
                                     <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24" stroke-width="2">
                                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -98,7 +98,7 @@
                                 <li v-for="task in experience[activeIndex].tasks" :key="task"
                                     class="flex items-start gap-3 text-gray-300 leading-relaxed text-sm sm:text-base">
                                     <span
-                                        class="mt-2 w-1.5 h-1.5 rounded-full bg-linear-to-r from-pink-400 to-cyan-400 shrink-0"></span>
+                                        class="mt-2 w-1.5 h-1.5 rounded-full bg-gradient-to-r from-pink-400 to-cyan-400 flex-shrink-0"></span>
                                     <span>{{ task }}</span>
                                 </li>
                             </ul>
@@ -112,7 +112,7 @@
                                 </p>
                                 <div class="flex flex-wrap gap-2">
                                     <span v-for="t in experience[activeIndex].tech" :key="t"
-                                        class="text-xs px-2.5 py-1 rounded-md bg-white/6 border border-white/10 text-gray-300">
+                                        class="text-xs px-2.5 py-1 rounded-md bg-white/[0.06] border border-white/10 text-gray-300">
                                         {{ t }}
                                     </span>
                                 </div>
