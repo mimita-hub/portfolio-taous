@@ -102,7 +102,7 @@ export default {
                 { name: 'HTML / CSS / Tailwind', level: 90 },
                 { name: 'JavaScript', level: 85 },
                 { name: 'MySQL / Oracle', level: 85 },
-                { name: 'Java / Python / C', level: 65 }
+                { name: 'Java / Python / C / Flutter', level: 65 }
             ],
             tools: [
                 {
@@ -146,9 +146,11 @@ export default {
                     icon: '<svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 7v10l9 5 9-5V7l-9-5z" fill="rgba(255,255,255,0.08)"/><path d="M8 12l4-4 4 4-4 4z" fill="rgba(255,255,255,0.2)"/></svg>'
                 },
                 {
-                    name: 'ClickUp',
-                    icon: '<svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 9-9" fill="rgba(255,255,255,0.08)"/><path d="M21 7v6h-6" fill="rgba(255,255,255,0.15)"/></svg>'
+                    name: 'Flutter',
+                    icon: '<svg class="w-7 h-7" viewBox="0 0 256 317" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path fill="rgba(255,255,255,0.08)" d="M157.7 0L0 157.7l48.7 48.7L255.1 0h-97.4z"/><path fill="rgba(255,255,255,0.08)" d="M157.7 73.1L73.1 157.7l48.7 48.7 84.6-84.6h-48.7z"/><path fill="rgba(255,255,255,0.08)" d="M121.8 194.2l48.7 48.7 48.7-48.7-48.7-48.7-48.7 48.7z"/><path fill="rgba(255,255,255,0.08)" d="M170.5 242.9l48.7 48.7 48.7-48.7-48.7-48.7-48.7 48.7z"/></svg>'
                 },
+
+
                 {
                     name: 'Cloudflare',
                     icon: '<svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18a4 4 0 000-8 5 5 0 00-9-1 3 3 0 00-1 6h10z" fill="rgba(255,255,255,0.08)"/><path d="M8 18h10" /></svg>'
