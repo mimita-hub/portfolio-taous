@@ -82,15 +82,14 @@ export default {
             this.status = null;
 
             try {
-                // Remplace par ton propre endpoint (Formspree, EmailJS, ton API, etc.)
-                // Exemple avec Formspree :
-                // await fetch('https://formspree.io/f/TON_ID', {
-                //   method: 'POST',
-                //   headers: { 'Content-Type': 'application/json' },
-                //   body: JSON.stringify(this.form)
-                // });
 
-                await new Promise(resolve => setTimeout(resolve, 1000)); // simulation
+                await fetch('https://formspree.io/f/mjykreja', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(this.form)
+                });
+
+                await new Promise(resolve => setTimeout(resolve, 1000));
 
                 this.status = 'success';
                 this.form = { name: '', email: '', subject: '', message: '' };
